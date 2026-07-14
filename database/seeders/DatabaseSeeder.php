@@ -8,11 +8,13 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call([
-            UserSeeder::class,
-            KategoriSeeder::class,
-            LogAktivitasSeeder::class,
-            SuratSeeder::class,
-        ]);
+        if (\App\Models\User::count() === 0) {
+            $this->call([
+                UserSeeder::class,
+                KategoriSeeder::class,
+                LogAktivitasSeeder::class,
+                SuratSeeder::class,
+            ]);
+        }
     }
 }
