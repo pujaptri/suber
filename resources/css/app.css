@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+
+/* Laravel pagination active styling override */
+nav[role="navigation"] span[aria-current="page"] > span {
+    background-color: #0c0d0e !important;
+    border-color: #0c0d0e !important;
+    color: #ffffff !important;
+}
+nav[role="navigation"] a:hover {
+    background-color: #f3f4f6 !important;
+}
